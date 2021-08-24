@@ -42,12 +42,19 @@ if (UserChoice != null) {
                     }else{
                         if (CompScore > UserScore) {
                             Result.innerText = "As expected I won...I scored " + CompScore + " while you scored " + UserScore;
+                            sessionStorage.removeItem("UserScore");
+                            sessionStorage.removeItem("CompScore");
                         }else if (CompScore < UserScore){
                             Result.innerText = "You are amazing! Congrats, you scored " + UserScore + " while I did " + CompScore;
+                            sessionStorage.removeItem("UserScore");
+                            sessionStorage.removeItem("CompScore");
                         }else if(CompScore == UserScore){
                             Result.innerText = "That was an amazing match! We both scored " + UserScore;
+                            sessionStorage.removeItem("UserScore");
+                            sessionStorage.removeItem("CompScore");
                         }
                         sessionStorage.removeItem("choice");
+                        
                     }
     
                 } else {
@@ -68,13 +75,20 @@ if (UserChoice != null) {
                     }else{
                         if (CompScore > UserScore) {
                             Result.innerText = "As expected I won...I scored " + CompScore + " while you scored " + UserScore;
+                            sessionStorage.removeItem("UserScore");
+                            sessionStorage.removeItem("CompScore");
                         }else if (CompScore < UserScore){
                             Result.innerText = "You are amazing! Congrats, you scored " + UserScore + " while I did " + CompScore;
+                            sessionStorage.removeItem("UserScore");
+                            sessionStorage.removeItem("CompScore");
                         }else if(CompScore == UserScore){
                             Result.innerText = "That was an amazing match! We both scored " + UserScore;
+                            sessionStorage.removeItem("UserScore");
+                            sessionStorage.removeItem("CompScore");
                         }
                     }
                     sessionStorage.removeItem("choice");
+                    
                 } else {
                     ScoreCard.innerText = "I chose " + CompNum +" while you chose " + userNum;
                     CompScore += parseInt(CompNum);
